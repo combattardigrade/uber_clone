@@ -97,7 +97,7 @@ class _PhoneSignupPage extends State<PhoneSignupPage> {
               ],
             )
             ),
-            floatingActionButton: FloatingActionButton(onPressed: () {}, child: Icon(Icons.arrow_forward)),
+            floatingActionButton: FloatingActionButton(onPressed: () {}, child: Icon(Icons.arrow_forward), backgroundColor: Colors.cyan,),
           );
   }
 }
