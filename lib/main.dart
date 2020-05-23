@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uber/src/pages/home.dart';
+import 'package:uber/src/pages/phone_signup.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: PhoneSignupPage(),
     );
   }
 }
