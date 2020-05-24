@@ -68,6 +68,33 @@ class _HomeMenuDrawerState extends State<HomeMenuDrawer> {
             linkMenuDrawer('Soporte', Icons.settings, () {
               Navigator.pushNamed(context, '/payment');
             }),
+            Divider(),
+            Container(
+              
+              alignment: Alignment.bottomCenter,
+              child: Material(
+                elevation: 0.0,
+                child: MaterialButton(
+                  elevation: 0.0,
+                  // minWidth: MediaQuery.of(context).size.width * 0.6,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.cyan),
+                  ),
+                  color: Colors.white,
+                  textColor: Colors.cyan,
+                  padding:
+                      EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                  onPressed: () {},
+                  child: Text(
+                    'Cambiar a conductor',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
           crossAxisAlignment: CrossAxisAlignment.start,
         )
