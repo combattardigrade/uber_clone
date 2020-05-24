@@ -3,14 +3,14 @@ import 'package:intro_slider/dot_animation_enum.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
 
-class IntroScreen extends StatefulWidget {
-  IntroScreen({Key key}) : super(key: key);
+class TutorialPage extends StatefulWidget {
+  TutorialPage({Key key}) : super(key: key);
 
   @override
-  _IntroScreen createState() => new _IntroScreen();
+  _TutorialPage createState() => new _TutorialPage();
 }
 
-class _IntroScreen extends State<IntroScreen> {
+class _TutorialPage extends State<TutorialPage> {
   List<Slide> slides = new List();
 
   Function goToTab;

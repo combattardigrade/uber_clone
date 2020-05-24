@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:uber/src/pages/home.dart';
+import 'package:uber/src/pages/intro.dart';
 import 'package:uber/src/pages/phone_signup.dart';
 import 'package:uber/src/pages/code_verification.dart';
 import 'package:uber/src/pages/welcome.dart';
-import 'package:uber/src/pages/intro_screen.dart';
-import 'package:uber/src/pages/main_map.dart';
+import 'package:uber/src/pages/tutorial.dart';
+import 'package:uber/src/pages/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MainMap(),
+      home: HomePage(),
     );
   }
 }
