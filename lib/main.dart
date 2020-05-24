@@ -4,6 +4,7 @@ import 'package:uber/src/pages/phone_signup.dart';
 import 'package:uber/src/pages/code_verification.dart';
 import 'package:uber/src/pages/welcome.dart';
 import 'package:uber/src/pages/intro_screen.dart';
+import 'package:uber/src/pages/main_map.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: IntroScreen(),
+      home: MainMap(),
     );
   }
 }
