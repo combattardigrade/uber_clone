@@ -10,63 +10,7 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
-    final facebookButon = Material(
-      elevation: 5.0,
-      borderRadius: BorderRadius.circular(30.0),
-      color: Color(0xff2C599F),
-      child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width / 2.5,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Image.asset(
-              "assets/facebook_logo.png",
-              fit: BoxFit.contain,
-              height: 20,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 15),
-              child: Text(
-                "Facebook",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Color(0xFFFFFFFF)),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-
-    final googleButon = Material(
-      elevation: 5.0,
-      borderRadius: BorderRadius.circular(30.0),
-      color: Color(0xffFFFFFF),
-      child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width / 2.5,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Image.asset(
-              "assets/google_logo.png",
-              fit: BoxFit.contain,
-              height: 20,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 15),
-              child: Text(
-                "Google",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Color(0xff868686)),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
+    
 
     return Scaffold(
         body: Stack(
