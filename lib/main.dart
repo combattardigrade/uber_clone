@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uber/src/pages/home.dart';
 import 'package:uber/src/pages/phone_signup.dart';
 import 'package:uber/src/pages/code_verification.dart';
+import 'package:uber/src/pages/welcome.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: CodeVerificationPage(),
+      home: WelcomePage(),
     );
   }
 }
