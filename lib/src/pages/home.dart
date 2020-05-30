@@ -7,6 +7,8 @@ import 'package:uber/src/widgets/home_menu_drawer.dart';
 import 'package:uber/src/widgets/service_sheet.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:uber/src/widgets/serviceTutorialDialog.dart';
+import 'package:uber/src/widgets/quickRideTutorialDialog.dart';
+import 'package:uber/src/widgets/cancelRideDialog.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -31,6 +33,22 @@ class _HomePageState extends State<HomePage> {
       context: context,
       barrierDismissible: true,
       builder: (BuildContext context) => ServiceTutorialDialog(),
+    );
+  }
+
+  void _showQuickRideTutorialDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext context) => QuickRideTutorialDialog(),
+    );
+  }
+
+  void _cancelRideDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible:  true,
+      builder:  (BuildContext context) => CancelRideDialog(),
     );
   }
 
@@ -93,7 +111,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: Align(
         alignment: Alignment.bottomRight,
         child: FloatingActionButton(
-          onPressed: _showServiceTutorialDialog,
+          onPressed: _cancelRideDialog,
           child: Icon(Icons.arrow_forward),
           backgroundColor: Colors.cyan,
         ),
