@@ -70,7 +70,6 @@ class _HomeMenuDrawerState extends State<HomeMenuDrawer> {
             }),
             Divider(),
             Container(
-              
               alignment: Alignment.bottomCenter,
               child: Material(
                 elevation: 0.0,
