@@ -6,6 +6,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:uber/src/widgets/home_menu_drawer.dart';
 import 'package:uber/src/widgets/service_sheet.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:uber/src/widgets/serviceTutorialDialog.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -25,7 +26,24 @@ class _HomePageState extends State<HomePage> {
     controller.setMapStyle(value);
   }
 
-  void _showServiceBottomSheet() {}
+  void _showServiceTutorialDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext context) => ServiceTutorialDialog(),
+    );
+  }
+
+  void _showServicesSheet() {
+    showMaterialModalBottomSheet(
+      context: context,
+      expand: false,
+      backgroundColor: Colors.transparent,
+      builder: (context, scrollController) => Container(
+        child: ServiceSheet(),
+      ),
+    );
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,16 +93,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: Align(
         alignment: Alignment.bottomRight,
         child: FloatingActionButton(
-          onPressed: () {
-            showMaterialModalBottomSheet(
-              context: context,
-              expand: false,
-              backgroundColor: Colors.transparent,
-              builder: (context, scrollController) => Container(
-                child: ServiceSheet(),
-              ),
-            );
-          },
+          onPressed: _showServiceTutorialDialog,
           child: Icon(Icons.arrow_forward),
           backgroundColor: Colors.cyan,
         ),
