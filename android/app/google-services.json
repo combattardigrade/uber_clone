@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "352227154170",
+    "firebase_url": "https://bipp-95e72.firebaseio.com",
+    "project_id": "bipp-95e72",
+    "storage_bucket": "bipp-95e72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352227154170:android:59df12b094302023225143",
+        "android_client_info": {
+          "package_name": "com.bipp.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352227154170-ko0b5n1efcmmm9nv30lrptl40sv1t0t1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ2LCOzXR9cCjqZvf5hUnB6hoc2hGWrr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352227154170-ko0b5n1efcmmm9nv30lrptl40sv1t0t1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

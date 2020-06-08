@@ -1,4 +1,4 @@
-package com.example.uber
+package com.bipp.app
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

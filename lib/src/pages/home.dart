@@ -5,10 +5,12 @@ import 'package:geolocator/geolocator.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:uber/src/widgets/home_menu_drawer.dart';
 import 'package:uber/src/widgets/service_sheet.dart';
+import 'package:uber/src/widgets/destinationSearchSheet.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:uber/src/widgets/serviceTutorialDialog.dart';
 import 'package:uber/src/widgets/quickRideTutorialDialog.dart';
 import 'package:uber/src/widgets/cancelRideDialog.dart';
+import 'package:uber/src/widgets/searching_driver_sheet.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -63,6 +65,28 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  void _showDestinationSearchSheet() {
+    showMaterialModalBottomSheet(
+      context: context, 
+      expand: false,
+      backgroundColor: Colors.transparent,
+      builder: (context, scrollController) => Container(
+        child: DestinationSearchSheet(),
+      ),
+    );
+  }
+
+  void _showSearchingDriverSheet() {
+    showMaterialModalBottomSheet(
+      context: context,
+      expand: false,
+      backgroundColor: Colors.transparent,
+      builder: (context, scrollController) => Container(
+        child: SearchingDriverSheet(),
+      ),
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -111,7 +135,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: Align(
         alignment: Alignment.bottomRight,
         child: FloatingActionButton(
-          onPressed: _cancelRideDialog,
+          onPressed: _showSearchingDriverSheet,
           child: Icon(Icons.arrow_forward),
           backgroundColor: Colors.cyan,
         ),
